@@ -1,0 +1,401 @@
+html , body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F2F0de;
+    } 
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color:#334EAC;
+    font-size: 20px;
+    transition: all 0.5s ;
+}
+
+.pf:hover {
+    transform: scale(1.2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border:none;
+    position: relative;
+padding: 20px;
+font-size: 18px;
+}
+
+/* For the logo and text to stay on the same line */
+header .logo,
+header .text {
+display: inline-block;
+}
+
+.header {background-color: #fff9f0 ; }
+
+/* Make sure logo is responsive and scales well */
+header .logo img {
+max-width: 150px;  /* Adjust this based on your logo size */
+height: auto;  /* Keep aspect ratio */
+}
+
+/* Text should scale down properly on smaller screens */
+header .text {
+font-size: 20px;
+white-space: nowrap;  /* Prevent text from wrapping */
+}
+    
+    .left {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .left:hover {
+        transform: scale(1.2)  rotate(5deg);
+        transition: all 2s ;
+    }
+    
+    .right {
+        border-radius: 80%;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+    }
+    
+    .right:hover {
+        transform: scale(1.2)  rotate(5deg);
+        transition: all 2s ;
+    }
+
+    .patrick-hand-regular {
+        font-family: "Patrick Hand", serif;
+        font-weight: 800;
+        font-style: normal;
+        
+      }
+    
+      header::after {
+        content: "";
+        position: absolute;
+        height: 107%;
+        width: 100%;
+        z-index: -1;
+        background-color: #7096d1;
+      }
+    
+      /* background-image: linear-gradient(120deg , #662D8C , #ED1E79); */
+    
+     header:hover {
+        background-color: #f2f7eb;
+      }
+
+      .maintitle {
+        font-size:50px;
+      }
+
+.theMemoryofClasstitle {
+    font-size:35px;
+    margin-left:8vw;
+}
+
+.classPhoto {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.classA {
+    width: 17vw;
+    height: 60vh;
+}
+
+.commonProperty {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.snap, .pf, .classPhoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.classPhoto, .snapphoto, .classpf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+
+.classB {
+    width: 30vw;
+    height: 60vh;
+}
+
+.classC {
+    width: 60vw;
+    height: 60vh;
+}
+
+figcaption {text-align: center;}
+
+.snapphoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.classpf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.snap {
+    width: 20vw;
+    height: 30vh;
+    border: 5px #7096d1 solid;
+    border-radius: 25px;
+}
+
+.pf, .snap {
+    width: min(15vw, 15vh); /* Ensures a square shape */
+    height: min(15vw, 15vh);
+    max-width: 150px; /* Prevents them from becoming too large */
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 20px; /* Rounded corners for .snap, change to 50% for .pf */
+}
+
+.pf {
+    width: 15vw;
+    height: 15vw;  /* Ensure height and width are equal */
+    max-width: 150px; /* Prevent images from becoming too big */
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Ensures it stays a circle */
+}
+
+.snap, .pf {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.snap:active, .pf:active {
+    transform: scale(2.5); /* Increases size on press */
+}
+
+.zoomed {
+    transform: scale(1.5); /* Enlarges the image */
+}
+
+h3 {
+    position: relative;
+}
+
+h3::after {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:3px;
+    width:0%;
+    background-color:blue;
+    transition: all 2s ease-in-out;
+}
+
+h3:hover::after {
+    width:22%;
+}
+
+.homePage {
+    font-size: 12px;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: transparent; /* Make sure it doesn’t add a large background */
+    border-radius: 25px;
+}
+
+button {
+    width: 120px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #D4A373, #B08968);
+    color: white;
+    font-size: clamp(12px, 2vw, 16px); /* Responsive font size */
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Hover effect */
+button:hover {
+    background: linear-gradient(135deg, #B08968, #D4A373);
+    transform: scale(1.05);
+}
+
+/* Click effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Button alignment */
+.buttonAlign {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+#bulbSection {
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(240, 248, 255, 0.8); /* Reduced opacity */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease;
+  }
+
+  #bulbSection h2 {
+    color: #4CAF50;
+    font-size: 2rem;
+  }
+
+  #bulbSection p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  /* To style the center position */
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+
+  .bulb-button {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .bulb-button:hover {
+    transform: scale(1.2); /* Slightly enlarges the button */
+    filter: brightness(1.5); /* Makes the bulb icon "brighter" */
+  }
+
+
+/* Additional Media Query for Smaller Screens */
+@media (max-width: 480px) {
+    button {
+        width: 100px;
+        height: 40px;
+        font-size: 12px; /* Smaller font size for small screens */
+    }
+       /* Adjusting different screen sizes */
+        h1 {
+            font-size: 28px; /* Smaller screens */ }
+}
+
+
+@media (max-width:367px) {
+    .theMemoryofClasstitle {font-size:15px;
+                            transition: all 1s;} 
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+  
+    /* Ensure the logo scales down nicely */
+    header .logo img {
+      max-width: 100px;  /* Set a smaller max-width for smaller screens */
+    }
+  
+    /* Adjust font size for text */
+    header .text {
+      font-size: 16px;  /* Smaller text size for mobile */
+    }
+  
+    /* If needed, reduce the space between logo and text */
+    .maintitle {font-size:30px;
+        transition: all 1s;} 
+    .classA {width: 50vw;}
+    .classB {width:90vw;}
+    .classC {width: 90vw;
+    height: 50vh;}
+    .snap {width: 60vw;}
+    .pf {width: 45vw;}
+    .commonProperty, .snap, .pf {
+        border-radius: 10px; /* Slightly smaller rounding */
+    }
+    .zoomed {
+            transform: scale(2); /* Even bigger zoom for smaller screens */
+        }
+  }
+  @media (max-width: 768px) and (orientation: portrait) {
+    .pf, .snap {
+        width: 25vw;
+        height: 25vw;
+    }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+    .pf, .snap {
+        width: 20vh; /* Use `vh` instead of `vw` to avoid stretching */
+        height: 20vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    button {
+        width: 140px;
+        height: 50px;
+        font-size: 18px; /* Larger font size for desktops */
+    }
+    h1 {
+            font-size: 60px; /* Larger screens */
+        }
+    
+}
+
+    

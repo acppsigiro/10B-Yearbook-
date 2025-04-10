@@ -1,0 +1,230 @@
+html , body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    mix-blend-mode: multiply;
+}
+
+ body {
+    background-color: #F2F0de;
+    } 
+
+.maintitle {
+    text-align: center;
+    font-size:50px;
+}
+
+/* Style for blurring the background */
+.blurred {
+    filter: blur(8px);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Ensure the popover itself does not get blurred */
+#moreA {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.popoDiv {
+    background-color: #7096d1;
+    margin-top: 20px;
+}
+
+.close {
+    margin-top: 25px;
+}
+
+a {
+    text-decoration: none;
+    color:#1E90FF;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border:none;
+    position: relative;
+}
+
+.header {background-color: #fff9f0 ; }
+
+.fontsize {
+    font-size: 30px;
+    text-align: center;
+}
+
+hr {
+    width: 80%;
+    height: 3px;
+    border: none;
+    background-color: darkcyan;
+    margin-top: 10px;
+}
+
+.paddbot {
+    padding-top:10px;
+}
+
+.left {
+    width: 150px;
+    height: 120px;
+}
+
+.left:hover {
+    transform: scale(1.2)  rotate(5deg);
+    transition: all 2s ;
+}
+
+.right {
+    border-radius: 80%;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.right:hover {
+    transform: scale(1.2)  rotate(5deg);
+    transition: all 2s ;
+}
+
+.menuDiv {
+    width: 300px;
+    height: 90%;
+    border-radius: 5%;
+    border:1px solid black;
+    background-color: #edf1f6;
+}
+
+
+
+footer {
+    background-color: red;
+    height: 100px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 80%;
+    gap:5px;
+}
+
+/*.menul {background: linear-gradient(90deg, #A97A40, #C12F45);}*/
+
+.main {
+    height: 600px;
+}
+
+span {
+    font-size: 20px;
+}
+
+.marginDiv {
+    margin-top: 13px;
+}
+
+.flexDiv {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+button {
+    width: 80px;
+    height: 38px;
+    border-radius: 30%;
+    border: none;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #1E90FF;
+}
+
+
+.buttonDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+button:hover {
+    z-index: 0;
+    box-shadow: 30px 0px 45px #7096d1 , -30px 0 45px #7096d1;
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #fff;
+    transition: all 1s;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    z-index: -1;
+    background-color: #334EAC;
+    border-radius: 30%;
+}
+
+.patrick-hand-regular {
+    font-family: "Patrick Hand", serif;
+    font-weight: 800;
+    font-style: normal;
+    
+  }
+
+  header::after {
+    content: "";
+    position: absolute;
+    height: 107%;
+    width: 100%;
+    z-index: -1;
+    background-color: #7096d1;
+  }
+
+  /* background-image: linear-gradient(120deg , #662D8C , #ED1E79); */
+
+ header:hover {
+    background-color: #f2f7eb;
+  }
+
+  @media (max-width:767px) {
+    .maintitle {font-size:30px;}
+    .left {width: 100px;
+    height: 80px;}
+    .right {
+        width: 46px;
+        height: 46px;
+    }
+    div {transform: scale(0.9);}
+    .popoDiv {height: auto;}
+}
+
+@media (max-width:375) {
+    div  {transform: scale(0.7);}
+}

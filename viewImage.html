@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Image</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+        }
+        img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="photo.html" class="back-button">⬅ Go Back</a>
+    <img id="displayedImage" src="" alt="Selected Image">
+    
+    <script>
+        // Get the image URL from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const imgSrc = urlParams.get('src');
+
+        // Display the image
+        if (imgSrc) {
+            document.getElementById("displayedImage").src = imgSrc;
+        } else {
+            document.body.innerHTML = "<h2 style='color: white;'>No image found.</h2>";
+        }
+    </script>
+</body>
+</html>
