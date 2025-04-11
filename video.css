@@ -29,6 +29,21 @@ body {
         box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow */
     }
 
+iframe {
+    width: 80%; /* Adjust size */
+    max-width: 800px; /* Limit max width */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add hover effect */
+iframe:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+
     section:last-of-type {
         margin-bottom: 60px; /* More space before buttons */
     }
